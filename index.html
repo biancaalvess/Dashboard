@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Meteorológico</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <h1>Painel Meteorológico</h1>
+                <p class="header-subtitle">Previsão do tempo em tempo real</p>
+            </div>
+            <div class="header-actions">
+                <button id="themeToggle" class="theme-toggle">
+                    <span class="theme-toggle-icon">🌙</span>
+                    <span class="theme-toggle-text">Modo Escuro</span>
+                </button>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="search-container">
+                <div class="search-wrapper">
+                    <input type="text" id="citySearch" placeholder="Digite o nome da cidade..." class="search-input">
+                    <button id="searchButton" class="search-button">Buscar</button>
+                </div>
+                <div class="search-suggestions">
+                    <span class="suggestion-tag">São Paulo</span>
+                    <span class="suggestion-tag">Rio de Janeiro</span>
+                    <span class="suggestion-tag">Curitiba</span>
+                </div>
+            </div>
+
+            <div id="weatherCards" class="weather-cards">
+                <!-- Cards will be populated by JavaScript -->
+            </div>
+        </main>
+    </div>
+
+    <div id="weatherModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Detalhes do Tempo</h2>
+                <button class="close">&times;</button>
+            </div>
+            <div id="modalContent" class="modal-body"></div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>© 2025 Bianca Alves. Painel Meteorológico. Dados fornecidos em tempo real.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
